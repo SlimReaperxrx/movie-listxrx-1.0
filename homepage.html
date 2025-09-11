@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie List</title>
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+  <!-- Toggle Button -->
+  <button id="toggle-btn">☰</button>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Status</h2>
+      <ul>
+         <li><a href="watched.html">Watched</a></li>
+    <li><a href="unwatched.html">Not Watched</a></li>
+      </ul>
+        <h2 style="margin-top:30px;">Download Sites</h2>
+  <ul>
+    <li><a href="https://fzmovies.live/" target="_blank" rel="noopener">Fzmovies</a></li>
+    <li><a href="https://moviebox.ph/" target="_blank" rel="noopener">MovieBox</a></li>
+    <li><a href="https://nkiri.com/" target="_blank" rel="noopener">Nkiri</a></li>
+    <li><a href="https://animepahe.com/" target="_blank" rel="noopener">AnimiPahe</a></li>
+  </ul>
+  <button onclick="exportMovies()">Export Movies</button>
+<input type="file" accept=".json" onchange="importMovies(event)">
+    </aside>
+
+    <!-- Movie Grid -->
+    <main class="movie-grid"></main>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

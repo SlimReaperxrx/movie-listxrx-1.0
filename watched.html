@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watched Movies</title>
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+  <button id="toggle-btn">☰</button>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Status</h2>
+      <ul>
+        <li><a href="watched.html">Watched</a></li>
+        <li><a href="unwatched.html">Not Watched</a></li>
+        <li><a href="homepage.html">All</a></li>
+      </ul>
+    </aside>
+    <main class="movie-grid"></main>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    // Render only watched movies
+    renderMovies && renderMovies("watched");
+  </script>
+</body>
+</html>

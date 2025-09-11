@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #000;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  transition: margin-left 0.3s ease;
+}
+
+/* Toggle Button */
+#toggle-btn {
+  background: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px; 
+  z-index: 2001;
+  position: fixed;
+  left: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #000000;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 500;
+  left: -240px; /* hidden by default */
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0; /* slide in */
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #12d9f3;
+  padding-bottom: 5px;
+  margin-top: 200px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 8px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.sidebar ul li:hover {
+  color: #12d9f3;
+}
+.sidebar ul li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.star-rating {
+  font-size: 1.3em;
+  margin-bottom: 8px;
+}
+.star {
+  transition: color 0.2s;
+}
+/* Movie Grid */
+.movie-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px;
+  padding: 20px;
+  margin-left: 0;
+  margin-top: 50px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.active ~ .movie-grid {
+  margin-left: 220px; /* shift content when sidebar is open */
+}
+
+.movie-tile {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.movie-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(51, 51, 51, 0.6);
+}
+
+.movie-tile img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.toggle-status {
+  background: #12d9f3;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 8px;
+}
+
+.toggle-status:hover {
+  background: #000000;
+  color: #12d9f3;
+}
